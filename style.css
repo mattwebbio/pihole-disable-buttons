@@ -1,0 +1,45 @@
+* {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(59, 59, 59);
+}
+
+.head {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 30px;
+}
+
+.status {
+    font-size: 24px;
+}
+
+.status.enabled {
+    color: rgb(83, 197, 87);
+}
+
+.status.disabled {
+    color: rgb(226, 59, 59);
+}
+
+.button {
+    border: none;
+    padding: 15px 32px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.enable-button {
+    background-color: rgb(83, 197, 87);
+}
+
+.disable-button {
+    background-color: rgb(226, 59, 59);
+}
