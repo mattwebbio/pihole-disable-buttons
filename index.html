@@ -22,15 +22,23 @@
                 function setStatus(n){
                     if (n.status == "enabled"){
                         $('#status').html('<span class="enabled">Enabled</span>');
+                        $('#enable-button').attr("style", "display: none;");
+                        $('#disable-buttons').attr("style", "display: block;");
                     } else if (n.status == "disabled"){
                         $('#status').html('<span class="disabled">Disabled</span>');
+                        $('#enable-button').attr("style", "display: block;");
+                        $('#disable-buttons').attr("style", "display: none;");
                     } else {
                         $('#status').html('<span>Error</span>');
+                        $('#enable-button').attr("style", "display: none;");
+                        $('#disable-buttons').attr("style", "display: none;");
                     }
                 }
 
                 function setConnectionError(){
                     $('#status').html('<span>Connection Error</span>');
+                    $('#enable-button').attr("style", "display: none;");
+                    $('#disable-buttons').attr("style", "display: none;");
                 }
 
                 function sendRequest(n){
@@ -57,12 +65,15 @@
             <span>Connecting...</span>
         </div>
         <br />
-        <span>Disable:</span><br />
-        <button class="button disable-button" id="disable10">10 minutes</button><br />
-        <button class="button disable-button" id="disable30">30 minutes</button><br />
-        <button class="button disable-button" id="disable60">1 hour</button><br />
-        <br />
-        <span>Enable:</span><br />
-        <button class="button enable-button" id="enable">Enable</button><br />
+        <div id="disable-buttons" style="display:none;">
+            <span>Disable:</span><br />
+            <button class="button disable-button" id="disable10">10 minutes</button><br />
+            <button class="button disable-button" id="disable30">30 minutes</button><br />
+            <button class="button disable-button" id="disable60">1 hour</button>
+        </div>
+        <div id="enable-button" style="display:none;">
+            <span>Enable:</span><br />
+            <button class="button enable-button" id="enable">Enable</button><br />
+        </div>
     </body>
 </html>
