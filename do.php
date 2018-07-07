@@ -8,13 +8,13 @@ switch($_SERVER['QUERY_STRING']){
     case "enable":
         echo(file_get_contents($PIHOLEURL . "?enable&auth=" . $WEBPASSWORD));
         break;
-    case "disable-10":
+    case "disable10":
         echo(file_get_contents($PIHOLEURL . "?disable=" . (10 * 60) . "&auth=" . $WEBPASSWORD));
         break;
-    case "disable-30":
+    case "disable30":
         echo(file_get_contents($PIHOLEURL . "?disable=" . (30 * 60) . "&auth=" . $WEBPASSWORD));
         break;
-    case "disable-60":
+    case "disable60":
         echo(file_get_contents($PIHOLEURL . "?disable=" . (60 * 60) . "&auth=" . $WEBPASSWORD));
         break;
 }

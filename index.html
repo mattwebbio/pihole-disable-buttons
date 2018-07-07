@@ -2,18 +2,67 @@
     <head>
         <title>Adblocker Control Panel</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" />
+        <script src="jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#disable10").click(function(){
+                    sendRequest("disable10");
+                });
+                $("#disable30").click(function(){
+                    sendRequest("disable30");
+                });
+                $("#disable60").click(function(){
+                    sendRequest("disable60");
+                });
+                $("#enable").click(function(){
+                    sendRequest("enable");
+                });
+
+                function setStatus(n){
+                    if (n.status == "enabled"){
+                        $('#status').html('<span class="enabled">Enabled</span>');
+                    } else if (n.status == "disabled"){
+                        $('#status').html('<span class="disabled">Disabled</span>');
+                    } else {
+                        $('#status').html('<span>Error</span>');
+                    }
+                }
+
+                function setConnectionError(){
+                    $('#status').html('<span>Connection Error</span>');
+                }
+
+                function sendRequest(n){
+                    $.ajax({
+                        dataType: "json",
+                        url: "do.php?" + n,
+                        success: setStatus,
+                        error: setConnectionError,
+                        timeout: 9000
+                    });
+                }
+
+                window.setInterval(function(){
+                    sendRequest("status");
+                }, 10000);
+
+                sendRequest("status");
+            });
+        </script>
     </head>
     <body>
         <span class="head">Adblocker:</span>
-        <div id="status" class="status enabled">Enabled</div>
+        <div id="status">
+            <span>Connecting...</span>
+        </div>
         <br />
         <span>Disable:</span><br />
-        <button class="button disable-button">10 minutes</button><br />
-        <button class="button disable-button">30 minutes</button><br />
-        <button class="button disable-button">1 hour</button><br />
+        <button class="button disable-button" id="disable10">10 minutes</button><br />
+        <button class="button disable-button" id="disable30">30 minutes</button><br />
+        <button class="button disable-button" id="disable60">1 hour</button><br />
         <br />
         <span>Enable:</span><br />
-        <button class="button enable-button">Enable</button><br />
+        <button class="button enable-button" id="enable">Enable</button><br />
     </body>
 </html>
