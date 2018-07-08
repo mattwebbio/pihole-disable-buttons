@@ -6,6 +6,8 @@ for a limited amount of time (without giving them the admin password). Host loca
 direct an old device's browser to the page, and mount the device wherever you want.
 
 ## Installation
+You can find more detailed setup info on my blog post [here](https://blog.mattwebb.io/2018/07/08/building-a-disable-button-for-pihole-using-an-old-phone/).
+
 Assuming you already have a web server with PHP installed, installation takes 2 steps:
 
 1. Create the directory where you want to host the panel and clone the repository into it:
