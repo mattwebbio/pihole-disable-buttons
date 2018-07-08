@@ -11,5 +11,3 @@ Assuming you already have a web server with PHP installed, installation takes 2 
 `git clone https://github.com/mattwebbio/pihole-disable-buttons.git .`
 
 2. Copy `config.example.php` to `config.php` and edit it with your PiHole address and API key.
-
-Done!
