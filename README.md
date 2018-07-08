@@ -17,8 +17,8 @@ Assuming you already have a web server with PHP installed, installation takes 2 
 2. Copy `config.example.php` to `config.php` and edit it with your PiHole address and API key.
 
 ## Security Precaution
-Theoretically, this app doesn't need PHP - I'm merely using it to hide the API key. If you don't use HTTPS
-on your PiHole server (the API URL you entered in the `config.php`) and you're not hosting this panel on the
+Theoretically, this app doesn't need PHP - I'm merely using it to hide the API key. If you don't [use HTTPS
+on your PiHole](https://discourse.pi-hole.net/t/enabling-https-for-your-pi-hole-web-interface/5771) server (the API URL you entered in the `config.php`) and you're not hosting this panel on the
 same server as PiHole (your API URL doesn't start with 127.0.0.1), then this kind of defeats the purpose and you may be
 broadcasting your API key across the network.
 
