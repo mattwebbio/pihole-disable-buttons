@@ -23,7 +23,7 @@ on your PiHole server (the API URL you entered in the `config.php`) and you're n
 same server as PiHole (your API URL doesn't start with 127.0.0.1), then this kind of defeats the purpose and you're likely
 broadcasting your API key across the network.
 
-If you're going to mount an old iPhone like I did, use [https://support.apple.com/en-us/ht202612](Guided Access) to prevent users from leaving Safari.
+If you're going to mount an old iPhone like I did, use [Guided Access](https://support.apple.com/en-us/ht202612) to prevent users from leaving Safari.
 
 ## FAQ
 * `API Error` - check the API entered key in config.php
