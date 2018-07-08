@@ -16,7 +16,12 @@ Assuming you already have a web server with PHP installed, installation takes 2 
 
 ## Extra Information
 Built with just HTML/CSS, jQuery and PHP. The UI checks the status of the PiHole server every 
-10 seconds. If you want more/different time options, just adjust index.html and do.php.
+10 seconds. If you want more/different time options, just adjust index.html and do.php. 
+
+Theoretically, this app doesn't need PHP - I'm merely using it to hide the API key. If you don't use HTTPS
+on your PiHole server (the API URL you entered in the `config.php`) and you're not hosting this panel on the
+same server as PiHole (your API URL isn't 127.0.0.1), then this kind of defeats the purpose and you're likely
+broadcasting your API key across the network.
 
 ## FAQ
 * `API Error` - check the API entered key in config.php
