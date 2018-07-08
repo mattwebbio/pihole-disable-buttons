@@ -14,14 +14,15 @@ Assuming you already have a web server with PHP installed, installation takes 2 
 
 2. Copy `config.example.php` to `config.php` and edit it with your PiHole address and API key.
 
-## Extra Information
-Built with just HTML/CSS, jQuery and PHP. The UI checks the status of the PiHole server every 
-10 seconds. If you want more/different time options, just adjust index.html and do.php. 
-
+## Security Precaution
 Theoretically, this app doesn't need PHP - I'm merely using it to hide the API key. If you don't use HTTPS
 on your PiHole server (the API URL you entered in the `config.php`) and you're not hosting this panel on the
 same server as PiHole (your API URL doesn't start with 127.0.0.1), then this kind of defeats the purpose and you're likely
 broadcasting your API key across the network.
+
+## Extra Information
+Built with just HTML/CSS, jQuery and PHP. The UI checks the status of the PiHole server every 
+10 seconds. If you want more/different time options, just adjust index.html and do.php.
 
 If you're going to mount an old iPhone like I did, use [Guided Access](https://support.apple.com/en-us/ht202612) to prevent users from leaving Safari.
 
