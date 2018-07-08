@@ -31,3 +31,4 @@ If you're going to mount an old iPhone like I did, use [Guided Access](https://s
 ## FAQ
 * `API Error` - check the API entered key in config.php
 * `Connection Error` - make sure the web server can ping the PiHole server (and make sure PiHole is online!)
+* Stuck on `Connecting...` - make sure your browser's Javascript is enabled
